@@ -1,0 +1,12 @@
+Todo: *= Later + = Next
+DONE :Stripe Integration - Done: Create Customer Delete Customer, Charge
+Booking System - Need to create a 1 Week ahead calender system for the Machine Booking System
+Admin Panel - Need to create a Easy class creator, Easy Person Managment with Easy ways to fix back charges update balances - [Also Admin Subscription Create would be great but idk] Done
+DONE :RFID Machine Control - Create a Controller page that allows for a code to be put into the URL check if its a valid user Check database for Cridentals - Indonesia
+Account page - Update Account page to allow for the users to Add in there details and Use strip API for things such as Default cards etc
+*Store - This will be more complex but what Ever its an online store with cart and stuff which is a bit hard but its possible to make
+*Service Selling - Even harder need to create a message board or something for memebers to communicate on and sell things which is prety hard to do.
+ + Create Machine Database's Easy to edit on the admin Panel but really Add a machine Add a name, add a type, add a skill level set if reserved or not and then set if charged by what time
+and then done.
+DONE : Custom Subscription Designer - Create a way for people to be able to create a subscription that fits there needs and not pay extra for things they dont want, similar to TING pricing
+Update User input security SQL injection and XSS threats are possible Currently
