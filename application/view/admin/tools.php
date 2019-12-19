@@ -13,7 +13,8 @@
         </div>
         <div>
 
-          <form action="<?= config::get("URL"); ?>tool/create" method="post" id = "subscription">
+
+          <form action="<?= config::get("URL"); ?>admin/createTool" method="post" id = "subscription">
             <b>Tool Name: </b> <input type="text" name="name" placeholder="Really Cool Name" maxlength="100" required><br>
             <textarea name="description" form="subscription" rows="4" cols="120" maxlength="1000" required>Enter text here...</textarea>
             <b> Unit Of time:  <input type="text" name="time" placeholder="hour"required /> </b>
@@ -50,12 +51,12 @@
               <p> Price: $<?= $tools->price; ?> per <?= $tools->time; ?>  </p>
               <br>
 
-                <form action="<?= config::get("URL"); ?>tool/Disable" method="post">
+                <form action="<?= config::get("URL"); ?>admin/DisableTool" method="post">
                   Disabled: <input type="checkbox" name="disable" value="0" <?php if ($tools->enabled == 0) { ?> checked <?php } ?> />
                   <input type="hidden" value="<?= $tools->tool_id; ?>" name ="id">
                   <input type="submit" value="Submit">
                 </form>
-                <form action="<?= config::get("URL"); ?>tool/Delete" method="post">
+                <form action="<?= config::get("URL"); ?>admin/DeleteTool" method="post">
 
                   <input type="hidden" value="<?= $tools->tool_id; ?>" name ="id">
                   <input type="submit" value="Delete Tool">

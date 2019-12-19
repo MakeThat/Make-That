@@ -10,3 +10,27 @@ Account page - Update Account page to allow for the users to Add in there detail
 and then done.
 DONE : Custom Subscription Designer - Create a way for people to be able to create a subscription that fits there needs and not pay extra for things they dont want, similar to TING pricing
 Update User input security SQL injection and XSS threats are possible Currently
+
+12/18 Items to Do:
+
+Create A locaitions Controller
+Create A location View page
+Create A Location Create page
+Allow for Easy tool Integration with Locaitons (Such as a checkbox for each locaiton that can be checked which would allow for mulitpul locations to have each tool)
+Create A calender for the classes to be View
+Create a Form to Create Classes
+Create A class view page (agian have the location data that brings up checkboxes for each location)
+Create A Solidified Skills page It can be a branch of the classes or Index page Which shows Skills
+Add Skills to Dashboard
+Add Class Reservations to Dashboard
+Add Subscription Managment (Upgrace / Cancel Subscription)
+Add in a Billing Managment Place
+Create the reserve tool System
+Create a Place for people to go and purchase Guest passes and such
+Create Admin Search and class attendies list
+Create a new Readme.md
+Update the CSS of the system
+Build a Shopping cart System
+Update The tool page to include the Machine status that links with the RFID/ Public API System
+Create A api Authentication System which allows for admins to create API keys
+Create Basic Documentation on how the system works and how people can contribute on it.

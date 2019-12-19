@@ -83,5 +83,30 @@ class AdminController extends Controller
             'tools' => ToolModel::GetAllTools())
     );
   }
+  // NO SECURITY CHECKS Needed BEcause of the fact that it is using admin panel also the Request::post() Function Handels Security
+ public function createTool()
+ {
+ //  ToolModel::CreateTool($name,$price,$description,$time,$reserve,$type,$materials,$process,$saftey);
+   ToolModel::CreateTool(Request::post("name"),Request::post("price"),Request::post("description"),Request::post("time"),Request::post("reserve"),Request::post("type"),Request::post("materials")
+   ,Request::post("process"),Request::post("saftey"));
+   Redirect::to("admin/tools");
+ }
+ public function updateTool()
+ {
+//  ToolModel::UpdateTool($tool_id,$name,$price,$time,$reserve,$type,$materials,$process,$saftey);
+ToolModel::CreateTool(Request::post("tool_id"),Request::post("name"),Request::post("price"),Request::post("description"),Request::post("time"),Request::post("reserve"),Request::post("type"),Request::post("materials")
+,Request::post("process"),Request::post("saftey"));
+ }
+ public function DeleteTool()
+ {
+
+   ToolModel::DeleteTool(Request::post("id"));
+ Redirect::to("admin/tools");
+ }
+ public function DisableTool()
+ {
+   ToolModel::DisableTool(Request::post("id"),Request::post("disable"));
+   Redirect::to("admin/tools");
+ }
 
 }

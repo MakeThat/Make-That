@@ -164,7 +164,7 @@ class ToolModel
     {
       $database = DatabaseFactory::getFactory()->getConnection();
 
-      $sql = "SELECT * FROM tools WHERE deleted NOT 1 AND enabled = 1";
+      $sql = "SELECT * FROM tools WHERE enabled = 1 AND  NOT deleted = 1 ";
       $query = $database->prepare($sql);
       $query->execute();
 
@@ -175,10 +175,15 @@ class ToolModel
           // all elements of array passed to Filter::XSSFilter for XSS sanitation, have a look into
           // application/core/Filter.php for more info on how to use. Removes (possibly bad) JavaScript etc from
           // the user's values
+          // We create the STD clas above the Filter becasuse the discription if filtered
+          // does not function as it should.
+          $AllTools[$tools->tool_id] = new stdClass();
+          $AllTools[$tools->tool_id]->description = $tools->description;
           array_walk_recursive($tools, 'Filter::XSSFilter');
 
-          $AllTools[$user->user_id] = new stdClass();
-          $AllTools[$tools->tool_id]->tool_id = $tools->tools_id;
+
+
+          $AllTools[$tools->tool_id]->tool_id = $tools->tool_id;
           $AllTools[$tools->tool_id]->name = $tools->name;
           $AllTools[$tools->tool_id]->price = $tools->price;
           $AllTools[$tools->tool_id]->time = $tools->time;
@@ -188,7 +193,7 @@ class ToolModel
           $AllTools[$tools->tool_id]->process = $tools->process;
           $AllTools[$tools->tool_id]->saftey = $tools->saftey;
           $AllTools[$tools->tool_id]->status = $tools->status;
-
+          $AllTools[$tools->tool_id]->enabled = $tools->enabled;
 
 
         }
